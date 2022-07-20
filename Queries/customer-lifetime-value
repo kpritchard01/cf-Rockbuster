@@ -1,0 +1,11 @@
+--Customer Lifetime Value = avg.order value X avg. # of transactions per period X retention rate					
+WITH transactions_cte (customer, transactions, avg_amount) AS			
+(SELECT DISTINCT customer_id AS customer,			
+	COUNT(DISTINCT payment_id) AS transactions,		
+ 	(SELECT ROUND(AVG(amount),2)		
+	 FROM payment) AS avg_amount		
+FROM payment			
+GROUP BY customer_id,avg_amount)			
+SELECT ROUND((AVG(transactions) * avg_amount),02) AS CLV			
+FROM transactions_cte			
+GROUP BY avg_amount			
