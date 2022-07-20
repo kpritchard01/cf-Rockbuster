@@ -1,0 +1,26 @@
+--All customer revenue
+SELECT ROUND(SUM(A.amount)) AS revenue,				
+ 	B.first_name,			
+	B.last_name,			
+ 	E.country			
+ FROM payment A				
+ INNER JOIN customer B ON A.customer_id = B.customer_id				
+ Inner JOIN address C ON B.address_id = C.address_id				
+ INNER JOIN city D ON C.city_id = D.city_id				
+ INNER JOIN country E ON D.country_id = E.country_id				
+ GROUP BY B.first_name, B.last_name, E.country				
+ ORDER BY revenue DESC				
+
+--Where are customers located with above average revenue?
+SELECT ROUND(SUM(A.amount)) AS revenue,	
+ 	B.first_name,
+	B.last_name,
+ 	E.country
+ FROM payment A	
+ INNER JOIN customer B ON A.customer_id = B.customer_id	
+ Inner JOIN address C ON B.address_id = C.address_id	
+ INNER JOIN city D ON C.city_id = D.city_id	
+ INNER JOIN country E ON D.country_id = E.country_id	
+ GROUP BY B.first_name, B.last_name, E.country	
+ HAVING SUM(A.amount) >= 102	
+ ORDER BY revenue DESC	
