@@ -26,6 +26,8 @@ The dataset comprises of information on the following parameters:
 * Staff 
 * Store
 
+![image](https://user-images.githubusercontent.com/109615484/180089609-c8b44aca-1cea-4fa7-8bbc-30c182223f3c.png)
+
 ## Data Dictionary
 View the Data Dictionary [here](Data_Dictionary.pdf).
 
