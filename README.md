@@ -26,4 +26,5 @@ The dataset comprises of information on the following parameters:
 * Staff 
 * Store
 
-View the Data Dictionary [here](Rockbuster Presentation.pptx).
+View the Data Dictionary [here](Data Dictionary.pdf).
+
