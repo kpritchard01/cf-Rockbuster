@@ -1,0 +1,11 @@
+--Top ten selling movies
+SELECT A.title,	
+	A.rating,
+	SUM(B.amount) AS revenue
+FROM film A	
+INNER JOIN inventory C ON A.film_id = C.film_id	
+INNER JOIN rental D ON C.inventory_id = D.inventory_id	
+INNER JOIN payment B ON D.rental_id = B.rental_id	
+GROUP BY A.title, A.rating	
+ORDER BY revenue DESC	
+LIMIT 10	
