@@ -1,0 +1,7 @@
+--Desciptive statistics
+SELECT AVG(rental_rate) AS avg_rental_rate,	
+	COUNT(DISTINCT film_id),
+	AVG(length) AS avg_length,
+	AVG(rental_duration) avg_rental_duration,
+	MODE() WITHIN GROUP(ORDER BY release_year) AS modal_release_year
+FROM film	
