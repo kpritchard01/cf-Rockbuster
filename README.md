@@ -1,5 +1,5 @@
 # Rockbuster
-Rockbuster Stealth LLC is a fictiour brick-and-mortar movie rental company with customers around the world. The management plans to use existing movie licenses to launch an online video rental service.
+Rockbuster Stealth LLC is a fictious brick-and-mortar movie rental company with customers around the world. The management plans to use existing movie licenses to launch an online video rental service.
 
 ## Objective
 The objective of this project is to put forward data-driven answers that the management team at Rockbuster could use for their 2020 company strategy. Here are the main questions answered through SQL:
